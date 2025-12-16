@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile - Lab 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+    <h2>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#contact-me">Message Me</a>
+    </h2>
+</header>
+
+<!-- THEME BUTTON -->
+<div class="center">
+    <button id="themeBtn" class="action-btn">Toggle Dark Mode</button>
+</div>
+
+<!-- HOME SECTION -->
+<section id="home" class="section">
+    <div class="home-container">
+        <!-- PROFILE PICTURE CHANGER -->
+<div class="profile-pic-container">
+    <img id="profilePic" src="myphotos.jpg" alt="Profile Picture" class="profile-img">
+
+    <!-- Hidden File Input -->
+    <input type="file" id="picInput" accept="image/*" hidden>
+
+    <!-- Button -->
+    <button id="changePicBtn" class="action-btn small">Change Picture</button>
+</div>
+
+
+        <h1 class="name">Shiela Mae M. Canillo</h1>
+        <p class="job-title" id="jobTitle">BSIT Student • Technical Writer</p>
+
+        <button id="editJobBtn" class="action-btn">Edit Job Title</button>
+
+        <!-- CONTACT CARD -->
+        <div class="card">
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:shielacanillo10@gmail.com">shielacanillo10@gmail.com</a></p>
+            <p>Phone: 0966-311-8115</p>
+	    <p>Address: Tower 6 Unit 735, Trees Residences, 
+		Brgy. Pasong Putik Proper, Novaliches Quezon City</p>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="card">
+            <h3>Skills</h3>
+            <button id="toggleSkillsBtn" class="action-btn small">Hide Skills</button>
+
+            <div id="skillsSection">
+                <ul>
+                    <li>GDocs</li>
+                    <li>Excel</li>
+                    <li>MS Word</li>
+                    <li>Canva</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RANDOM QUOTE -->
+        <div class="card">
+            <h3>Daily Motivation</h3>
+            <p id="quoteText">Click the button for a motivational quote!</p>
+            <button id="quoteBtn" class="action-btn small">Generate Quote</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="card about-card">
+        <p>
+            Hi, I'm a 4th Year College Student studying at National University Fairview.
+            I am currently taking Bachelor of Science in Information Technology major in Mobile Internet.
+            I’m 22 years old, and my hobbies include playing volleyball, badminton, singing, dancing,
+            binge-watching K-drama, and reading books.
+        </p>
+    </div>
+</section>
+
+<!-- MESSAGE FORM -->
+<section id="contact-me" class="section">
+    <h2>Message Me</h2>
+
+    <div class="card form-card">
+
+        <form onsubmit="return validateForm()">
+            <label>Name</label>
+            <input type="text" id="nameField">
+
+            <label>Email</label>
+            <input type="email" id="emailField">
+
+            <label>Message</label>
+            <textarea id="msgBox" maxlength="200"></textarea>
+
+            <p>Characters left: <span id="counter">200</span></p>
+
+            <button type="submit" class="action-btn">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p><strong>WebProg - Web Programming 2025</strong></p>
+    <p id="dateDisplay"></p>
+</footer>
+
+</body>
+</html>
